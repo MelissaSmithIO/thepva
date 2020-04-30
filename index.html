@@ -29,6 +29,7 @@
     <title>Home - melissasmiththepva.com</title>
 
     <!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
+    <!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [SEO - Search Appearance] menu and set up a template. -->
     <meta
       name="robots"
       content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
@@ -273,6 +274,41 @@
     </style>
     <link
       rel="stylesheet"
+      id="dashicons-css"
+      href="https://melissasmiththepva.com/wp-includes/css/dashicons.min.css?ver=5.4.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="admin-bar-css"
+      href="https://melissasmiththepva.com/wp-includes/css/admin-bar.min.css?ver=5.4.1"
+      type="text/css"
+      media="all"
+    />
+    <style id="admin-bar-inline-css" type="text/css">
+      @font-face {
+        font-family: "w3tc";
+        src: url("https://melissasmiththepva.com/wp-content/plugins/w3-total-cache/pub/fonts/w3tc.eot");
+        src: url("https://melissasmiththepva.com/wp-content/plugins/w3-total-cache/pub/fonts/w3tc.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://melissasmiththepva.com/wp-content/plugins/w3-total-cache/pub/fonts/w3tc.woff")
+            format("woff"),
+          url("https://melissasmiththepva.com/wp-content/plugins/w3-total-cache/pub/fonts/w3tc.ttf")
+            format("truetype"),
+          url("https://melissasmiththepva.com/wp-content/plugins/w3-total-cache/pub/fonts/w3tc.svg#w3tc")
+            format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .w3tc-icon:before {
+        content: "\0041";
+        top: 2px;
+        font-family: "w3tc";
+      }
+    </style>
+    <link
+      rel="stylesheet"
       id="wp-block-library-css"
       href="https://melissasmiththepva.com/wp-includes/css/dist/block-library/style.min.css?ver=5.4.1"
       type="text/css"
@@ -301,11 +337,20 @@
     />
     <link
       rel="stylesheet"
-      id="dashicons-css"
-      href="https://melissasmiththepva.com/wp-includes/css/dashicons.min.css?ver=5.4.1"
+      id="yoast-seo-adminbar-css"
+      href="https://melissasmiththepva.com/wp-content/plugins/wordpress-seo/css/dist/adminbar-1350.css?ver=13.5"
       type="text/css"
       media="all"
     />
+    <script type="text/javascript">
+      function w3tc_popupadmin_bar(url) {
+        return window.open(
+          url,
+          "",
+          "width=800,height=600,status=no,toolbar=no,menubar=no,scrollbars=yes"
+        );
+      }
+    </script>
     <script
       type="text/javascript"
       src="https://melissasmiththepva.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"
@@ -367,17 +412,38 @@
         background-color: #ffffff;
       }
     </style>
+    <style type="text/css" media="print">
+      #wpadminbar {
+        display: none;
+      }
+    </style>
+    <style type="text/css" media="screen">
+      html {
+        margin-top: 32px !important;
+      }
+      * html body {
+        margin-top: 32px !important;
+      }
+      @media screen and (max-width: 782px) {
+        html {
+          margin-top: 46px !important;
+        }
+        * html body {
+          margin-top: 46px !important;
+        }
+      }
+    </style>
     <link
       rel="stylesheet"
       id="et-core-unified-631-cached-inline-styles"
-      href="https://melissasmiththepva.com/wp-content/et-cache/631/et-core-unified-631-15881896682965.min.css"
+      href="https://melissasmiththepva.com/wp-content/et-cache/631/et-core-unified-631-15882854582389.min.css"
       onerror="et_core_page_resource_fallback(this, true)"
       onload="et_core_page_resource_fallback(this)"
     />
   </head>
   <body
     data-rsssl="1"
-    class="home page-template-default page page-id-631 custom-background et_pb_button_helper_class et_fixed_nav et_show_nav et_hide_primary_logo et_hide_fixed_logo et_secondary_nav_enabled et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_centered et_pb_footer_columns2 et_cover_background et_pb_gutter windows et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css"
+    class="home page-template-default page page-id-631 logged-in admin-bar no-customize-support custom-background et_pb_button_helper_class et_fixed_nav et_show_nav et_hide_primary_logo et_hide_fixed_logo et_secondary_nav_enabled et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_centered et_pb_footer_columns2 et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css"
   >
     <div id="page-container">
       <div id="top-header">
@@ -2970,7 +3036,7 @@
                                   type="hidden"
                                   id="_wpnonce-et-pb-contact-form-submitted-0"
                                   name="_wpnonce-et-pb-contact-form-submitted-0"
-                                  value="3f88a58c5c"
+                                  value="e425bf6590"
                                 /><input
                                   type="hidden"
                                   name="_wp_http_referer"
@@ -3236,6 +3302,14 @@
         },
       ];
     </script>
+    <script
+      type="text/javascript"
+      src="https://melissasmiththepva.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://melissasmiththepva.com/wp-includes/js/admin-bar.min.js?ver=5.4.1"
+    ></script>
     <script type="text/javascript">
       /* <![CDATA[ */
       var DIVI = { item_count: "%d Item", items_count: "%d Items" };
@@ -3246,10 +3320,10 @@
           "https:\/\/melissasmiththepva.com\/wp-content\/themes\/Divi\/images",
         builder_images_uri:
           "https:\/\/melissasmiththepva.com\/wp-content\/themes\/Divi\/includes\/builder\/images",
-        et_frontend_nonce: "76d8d4f4b2",
+        et_frontend_nonce: "8309ae8a81",
         subscription_failed:
           "Please, check the fields below to make sure you entered the correct information.",
-        et_ab_log_nonce: "7162c08dfb",
+        et_ab_log_nonce: "c518bde35a",
         fill_message: "Please, fill in the following fields:",
         contact_error_message: "Please, fix the following errors:",
         invalid: "Invalid email",
@@ -3291,13 +3365,620 @@
       type="text/javascript"
       src="https://melissasmiththepva.com/wp-includes/js/wp-embed.min.js?ver=5.4.1"
     ></script>
+    <!--[if lte IE 8]>
+      <script type="text/javascript">
+        document.body.className =
+          document.body.className.replace(
+            /(^|\s)(no-)?customize-support(?=\s|$)/,
+            ""
+          ) + " no-customize-support";
+      </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript">
+      (function () {
+        var request,
+          b = document.body,
+          c = "className",
+          cs = "customize-support",
+          rcs = new RegExp("(^|\\s+)(no-)?" + cs + "(\\s+|$)");
+
+        request = true;
+
+        b[c] = b[c].replace(rcs, " ");
+        // The customizer requires postMessage and CORS (if the site is cross domain).
+        b[c] += (window.postMessage && request ? " " : " no-") + cs;
+      })();
+    </script>
+    <!--<![endif]-->
+    <div id="wpadminbar" class="nojq nojs">
+      <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1"
+        >Skip to toolbar</a
+      >
+      <div
+        class="quicklinks"
+        id="wp-toolbar"
+        role="navigation"
+        aria-label="Toolbar"
+      >
+        <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+          <li id="wp-admin-bar-wp-logo" class="menupop">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/about.php"
+              ><span class="ab-icon"></span
+              ><span class="screen-reader-text">About WordPress</span></a
+            >
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+                <li id="wp-admin-bar-about">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/about.php"
+                    >About WordPress</a
+                  >
+                </li>
+              </ul>
+              <ul
+                id="wp-admin-bar-wp-logo-external"
+                class="ab-sub-secondary ab-submenu"
+              >
+                <li id="wp-admin-bar-wporg">
+                  <a class="ab-item" href="https://wordpress.org/"
+                    >WordPress.org</a
+                  >
+                </li>
+                <li id="wp-admin-bar-documentation">
+                  <a class="ab-item" href="https://codex.wordpress.org/"
+                    >Documentation</a
+                  >
+                </li>
+                <li id="wp-admin-bar-support-forums">
+                  <a class="ab-item" href="https://wordpress.org/support/"
+                    >Support</a
+                  >
+                </li>
+                <li id="wp-admin-bar-feedback">
+                  <a
+                    class="ab-item"
+                    href="https://wordpress.org/support/forum/requests-and-feedback"
+                    >Feedback</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="wp-admin-bar-site-name" class="menupop">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/"
+              >melissasmiththepva.com</a
+            >
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+                <li id="wp-admin-bar-dashboard">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/"
+                    >Dashboard</a
+                  >
+                </li>
+              </ul>
+              <ul id="wp-admin-bar-appearance" class="ab-submenu">
+                <li id="wp-admin-bar-themes">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/themes.php"
+                    >Themes</a
+                  >
+                </li>
+                <li id="wp-admin-bar-widgets">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/widgets.php"
+                    >Widgets</a
+                  >
+                </li>
+                <li id="wp-admin-bar-menus">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/nav-menus.php"
+                    >Menus</a
+                  >
+                </li>
+                <li id="wp-admin-bar-background" class="hide-if-customize">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/themes.php?page=custom-background"
+                    >Background</a
+                  >
+                </li>
+                <li
+                  id="wp-admin-bar-customize-divi-theme"
+                  class="hide-if-no-customize"
+                >
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/customize.php?url=https%3A%2F%2Fmelissasmiththepva.com%2F&#038;et_customizer_option_set=theme"
+                    >Theme Customizer</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="wp-admin-bar-updates">
+            <a
+              class="ab-item"
+              href="https://melissasmiththepva.com/wp-admin/update-core.php"
+              title="2 Plugin Updates"
+              ><span class="ab-icon"></span><span class="ab-label">2</span
+              ><span class="screen-reader-text">2 Plugin Updates</span></a
+            >
+          </li>
+          <li id="wp-admin-bar-comments">
+            <a
+              class="ab-item"
+              href="https://melissasmiththepva.com/wp-admin/edit-comments.php"
+              ><span class="ab-icon"></span
+              ><span
+                class="ab-label awaiting-mod pending-count count-0"
+                aria-hidden="true"
+                >0</span
+              ><span class="screen-reader-text comments-in-moderation-text"
+                >0 Comments in moderation</span
+              ></a
+            >
+          </li>
+          <li id="wp-admin-bar-new-content" class="menupop">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/post-new.php"
+              ><span class="ab-icon"></span><span class="ab-label">New</span></a
+            >
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+                <li id="wp-admin-bar-new-post">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/post-new.php"
+                    >Post</a
+                  >
+                </li>
+                <li id="wp-admin-bar-new-media">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/media-new.php"
+                    >Media</a
+                  >
+                </li>
+                <li id="wp-admin-bar-new-page">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/post-new.php?post_type=page"
+                    >Page</a
+                  >
+                </li>
+                <li id="wp-admin-bar-new-project">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/post-new.php?post_type=project"
+                    >Project</a
+                  >
+                </li>
+                <li id="wp-admin-bar-new-user">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/user-new.php"
+                    >User</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="wp-admin-bar-edit">
+            <a
+              class="ab-item"
+              href="https://melissasmiththepva.com/wp-admin/post.php?post=631&#038;action=edit"
+              >Edit Page</a
+            >
+          </li>
+          <li id="wp-admin-bar-wpseo-menu" class="menupop">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_dashboard"
+              ><div id="yoast-ab-icon" class="ab-item yoast-logo svg">
+                <span class="screen-reader-text">SEO</span>
+              </div>
+              <div class="wpseo-score-icon adminbar-seo-score na">
+                <span class="adminbar-seo-score-text screen-reader-text"
+                  >SEO score: Not available</span
+                >
+              </div></a
+            >
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-wpseo-menu-default" class="ab-submenu">
+                <li id="wp-admin-bar-wpseo-configuration-wizard">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_configurator"
+                    >Configuration Wizard</a
+                  >
+                </li>
+                <li id="wp-admin-bar-wpseo-kwresearch" class="menupop">
+                  <div
+                    class="ab-item ab-empty-item"
+                    tabindex="0"
+                    aria-haspopup="true"
+                  >
+                    <span class="wp-admin-bar-arrow" aria-hidden="true"></span
+                    >Keyword Research
+                  </div>
+                  <div class="ab-sub-wrapper">
+                    <ul
+                      id="wp-admin-bar-wpseo-kwresearch-default"
+                      class="ab-submenu"
+                    >
+                      <li id="wp-admin-bar-wpseo-kwresearchtraining">
+                        <a
+                          class="ab-item"
+                          href="https://yoa.st/wp-admin-bar?php_version=7.3&#038;platform=wordpress&#038;platform_version=5.4.1&#038;software=free&#038;software_version=13.5&#038;days_active=30plus&#038;user_language=en_US"
+                          target="_blank"
+                          >Keyword research training</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-adwordsexternal">
+                        <a
+                          class="ab-item"
+                          href="https://yoa.st/keywordplanner"
+                          target="_blank"
+                          >Google Ads</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-googleinsights">
+                        <a
+                          class="ab-item"
+                          href="https://yoa.st/google-trends"
+                          target="_blank"
+                          >Google Trends</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li id="wp-admin-bar-wpseo-analysis" class="menupop">
+                  <div
+                    class="ab-item ab-empty-item"
+                    tabindex="0"
+                    aria-haspopup="true"
+                  >
+                    <span class="wp-admin-bar-arrow" aria-hidden="true"></span
+                    >Analyze this page
+                  </div>
+                  <div class="ab-sub-wrapper">
+                    <ul
+                      id="wp-admin-bar-wpseo-analysis-default"
+                      class="ab-submenu"
+                    >
+                      <li id="wp-admin-bar-wpseo-inlinks">
+                        <a
+                          class="ab-item"
+                          href="https://search.google.com/search-console/links/drilldown?resource_id=https%3A%2F%2Fmelissasmiththepva.com&#038;type=EXTERNAL&#038;target=https%3A%2F%2Fmelissasmiththepva.com%2F&#038;domain="
+                          target="_blank"
+                          >Check links to this URL</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-kwdensity">
+                        <a
+                          class="ab-item"
+                          href="http://www.zippy.co.uk/keyworddensity/index.php?url=https%3A%2F%2Fmelissasmiththepva.com%2F&#038;keyword="
+                          target="_blank"
+                          >Check Keyphrase Density</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-cache">
+                        <a
+                          class="ab-item"
+                          href="//webcache.googleusercontent.com/search?strip=1&#038;q=cache:https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Check Google Cache</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-structureddata">
+                        <a
+                          class="ab-item"
+                          href="https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Google Structured Data Test</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-facebookdebug">
+                        <a
+                          class="ab-item"
+                          href="//developers.facebook.com/tools/debug/og/object?q=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Facebook Debugger</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-pinterestvalidator">
+                        <a
+                          class="ab-item"
+                          href="https://developers.pinterest.com/tools/url-debugger/?link=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Pinterest Rich Pins Validator</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-htmlvalidation">
+                        <a
+                          class="ab-item"
+                          href="//validator.w3.org/check?uri=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >HTML Validator</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-cssvalidation">
+                        <a
+                          class="ab-item"
+                          href="//jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >CSS Validator</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-pagespeed">
+                        <a
+                          class="ab-item"
+                          href="//developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Google Page Speed Test</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-google-mobile-friendly">
+                        <a
+                          class="ab-item"
+                          href="https://www.google.com/webmasters/tools/mobile-friendly/?url=https%3A%2F%2Fmelissasmiththepva.com%2F"
+                          target="_blank"
+                          >Mobile-Friendly Test</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li id="wp-admin-bar-wpseo-settings" class="menupop">
+                  <div
+                    class="ab-item ab-empty-item"
+                    tabindex="0"
+                    aria-haspopup="true"
+                  >
+                    <span class="wp-admin-bar-arrow" aria-hidden="true"></span
+                    >SEO Settings
+                  </div>
+                  <div class="ab-sub-wrapper">
+                    <ul
+                      id="wp-admin-bar-wpseo-settings-default"
+                      class="ab-submenu"
+                    >
+                      <li id="wp-admin-bar-wpseo-general">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_dashboard"
+                          >General</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-titles">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_titles"
+                          >Search Appearance</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-social">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_social"
+                          >Social</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-tools">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_tools"
+                          >Tools</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-wpseo-licenses">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=wpseo_licenses"
+                          >Premium</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="wp-admin-bar-w3tc" class="menupop">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_dashboard"
+              ><span class="w3tc-icon ab-icon"></span
+              ><span class="ab-label">Performance</span></a
+            >
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-w3tc-default" class="ab-submenu">
+                <li id="wp-admin-bar-w3tc_flush_all">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_dashboard&#038;w3tc_flush_all&#038;_wpnonce=1f74008e18"
+                    >Purge All Caches</a
+                  >
+                </li>
+                <li id="wp-admin-bar-w3tc_flush_current_page">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_dashboard&#038;w3tc_flush_post&#038;post_id=631&#038;_wpnonce=1f74008e18"
+                    >Purge Current Page</a
+                  >
+                </li>
+                <li id="wp-admin-bar-w3tc_flush" class="menupop">
+                  <div class="ab-item ab-empty-item" aria-haspopup="true">
+                    <span class="wp-admin-bar-arrow" aria-hidden="true"></span
+                    >Purge Modules
+                  </div>
+                  <div class="ab-sub-wrapper">
+                    <ul id="wp-admin-bar-w3tc_flush-default" class="ab-submenu">
+                      <li id="wp-admin-bar-w3tc_flush_pgcache">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_dashboard&#038;w3tc_flush_pgcache&#038;_wpnonce=1f74008e18"
+                          >Page Cache: All</a
+                        >
+                      </li>
+                      <li id="wp-admin-bar-w3tc_pgcache_flush_post">
+                        <a
+                          class="ab-item"
+                          href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_dashboard&#038;w3tc_flush_post&#038;post_id=631&#038;_wpnonce=1f74008e18"
+                          >Page Cache: Current Page</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li id="wp-admin-bar-w3tc_settings_general">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_general&#038;_wpnonce=1f74008e18"
+                    >General Settings</a
+                  >
+                </li>
+                <li id="wp-admin-bar-w3tc_settings_extensions">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_extensions&#038;_wpnonce=1f74008e18"
+                    >Manage Extensions</a
+                  >
+                </li>
+                <li id="wp-admin-bar-w3tc_settings_faq">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_faq&#038;_wpnonce=1f74008e18"
+                    >FAQ</a
+                  >
+                </li>
+                <li id="wp-admin-bar-w3tc_support">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/admin.php?page=w3tc_support"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li id="wp-admin-bar-et-use-visual-builder">
+            <a
+              class="ab-item"
+              href="https://melissasmiththepva.com/?et_fb=1&#038;PageSpeed=off"
+              >Enable Visual Builder</a
+            >
+          </li>
+        </ul>
+        <ul
+          id="wp-admin-bar-top-secondary"
+          class="ab-top-secondary ab-top-menu"
+        >
+          <li id="wp-admin-bar-search" class="admin-bar-search">
+            <div class="ab-item ab-empty-item" tabindex="-1">
+              <form
+                action="https://melissasmiththepva.com/"
+                method="get"
+                id="adminbarsearch"
+              >
+                <input
+                  class="adminbar-input"
+                  name="s"
+                  id="adminbar-search"
+                  type="text"
+                  value=""
+                  maxlength="150"
+                /><label for="adminbar-search" class="screen-reader-text"
+                  >Search</label
+                ><input type="submit" class="adminbar-button" value="Search" />
+              </form>
+            </div>
+          </li>
+          <li id="wp-admin-bar-my-account" class="menupop with-avatar">
+            <a
+              class="ab-item"
+              aria-haspopup="true"
+              href="https://melissasmiththepva.com/wp-admin/profile.php"
+              >Howdy, <span class="display-name">wpx_thevirtu</span
+              ><img
+                alt=""
+                src="https://secure.gravatar.com/avatar/5fd348b2e3cd605d9206436fc3cc11e4?s=26&#038;d=mm&#038;r=g"
+                srcset="
+                  https://secure.gravatar.com/avatar/5fd348b2e3cd605d9206436fc3cc11e4?s=52&#038;d=mm&#038;r=g 2x
+                "
+                class="avatar avatar-26 photo"
+                height="26"
+                width="26"
+            /></a>
+            <div class="ab-sub-wrapper">
+              <ul id="wp-admin-bar-user-actions" class="ab-submenu">
+                <li id="wp-admin-bar-user-info">
+                  <a
+                    class="ab-item"
+                    tabindex="-1"
+                    href="https://melissasmiththepva.com/wp-admin/profile.php"
+                    ><img
+                      alt=""
+                      src="https://secure.gravatar.com/avatar/5fd348b2e3cd605d9206436fc3cc11e4?s=64&#038;d=mm&#038;r=g"
+                      srcset="
+                        https://secure.gravatar.com/avatar/5fd348b2e3cd605d9206436fc3cc11e4?s=128&#038;d=mm&#038;r=g 2x
+                      "
+                      class="avatar avatar-64 photo"
+                      height="64"
+                      width="64"
+                    /><span class="display-name">wpx_thevirtu</span></a
+                  >
+                </li>
+                <li id="wp-admin-bar-edit-profile">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-admin/profile.php"
+                    >Edit My Profile</a
+                  >
+                </li>
+                <li id="wp-admin-bar-logout">
+                  <a
+                    class="ab-item"
+                    href="https://melissasmiththepva.com/wp-login.php?action=logout&#038;_wpnonce=102893c34f"
+                    >Log Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <a
+        class="screen-reader-shortcut"
+        href="https://melissasmiththepva.com/wp-login.php?action=logout&#038;_wpnonce=102893c34f"
+        >Log Out</a
+      >
+    </div>
   </body>
 </html>
 
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
-Page Caching using disk: enhanced 
+Page Caching using disk: enhanced{w3tc_pagecache_reject_reason}
 
-Served from: melissasmiththepva.com @ 2020-04-30 19:27:19 by W3 Total Cache
+Served from: melissasmiththepva.com @ 2020-04-30 23:16:23 by W3 Total Cache
 -->
